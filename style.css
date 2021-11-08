@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #F5F6F8;
+}
+
+hr {
+  margin-top: 50px;
+  background-color: #c2c2c2;
+}
+
+.btn {
+  padding: 14px 60px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn-white {
+  background-color: #FFFFFF;
+  color: #4C4DDC;
+}
+
+.navbar {
+  background: #f5f6f8 !important;
+}
+
+.navbar .navbar-brand {
+  color: #4C4DDC;
+}
+
+.navbar form .input-group {
+  width: 400px;
+}
+
+.navbar form .input-group input {
+  padding: 10px 14px;
+  border-right: none;
+}
+
+.navbar form .input-group input:placeholder-shown {
+  font-size: 12px;
+}
+
+.navbar form .input-group .input-group-text {
+  background: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar form .input-group {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
+  position: relative;
+}
+
+.navbar .navbar-nav .nav-item .nav-link i {
+  color: grey;
+  font-size: 24px;
+}
+
+.navbar .navbar-nav .nav-item .nav-link .badge {
+  background-color: #FE1818;
+  color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.navbar .navbar-nav .nav-item .nav-link img {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+}
+
+.banner {
+  background: url("Img/Banner.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 500px;
+}
+
+.banner .title {
+  color: #FFFFFF;
+  font-size: 54px;
+  font-weight: 600;
+  margin-top: 9rem;
+}
+
+.features {
+  margin-top: 50px;
+}
+
+.features1 {
+  text-align: center;
+}
+
+.features1 img {
+  margin-bottom: 1rem;
+}
+
+.features1 h4 {
+  margin-bottom: 1rem;
+}
+
+.features1 p {
+  color: #999999;
+}
+
+.collection {
+  margin-top: 100px;
+}
+
+.collection .btn {
+  padding: 20px;
+  border-radius: 5px;
+  width: 150px;
+  text-align: center;
+}
+
+.collection .image {
+  margin-top: 50px;
+}
+
+.collection .image .card {
+  width: 100%;
+  height: 420px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  position: relative;
+}
+
+.collection .image .card .card-body {
+  position: absolute;
+  bottom: 1rem;
+  left: .5rem;
+  color: white;
+}
+
+.collection .image .card .card-body .card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product {
+  margin-top: 100px;
+}
+
+.product .product-item {
+  margin-top: 50px;
+}
+
+.product .product-item .card {
+  border: none;
+  margin-bottom: 20px;
+  background: none;
+}
+
+.product .product-item .card .card-body {
+  padding: 15px 0px 0px 0px;
+}
+
+.product .product-item .card .card-body .star {
+  color: #DECD30;
+}
+
+.product .product-item .btn {
+  width: 100%;
+  background: none;
+  color: #4C4DDC;
+  border-color: #DFE0F3;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.product .product-item .btn:hover {
+  background: #4C4DDC;
+  color: #FFFFFF;
+}
+
+.product .product-item .card-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product .product-item .card-text:last-child {
+  text-decoration: line-through;
+  color: #b3b3b3;
+}
+
+.footer {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.footer h3 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #4C4DDC;
+}
+
+.footer p {
+  color: #B0B0B0;
+  font-size: 16px;
+}
+
+.footer h4 {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.footer a {
+  display: block;
+  text-decoration: none;
+  color: #B0B0B0;
+  margin-bottom: 13px;
+}
+
+.partner {
+  margin: 5rem 0;
+  background: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=style.css.map */

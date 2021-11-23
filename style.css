@@ -339,6 +339,22 @@ hr {
   background-color: #4C4DDC;
 }
 
+.cart .grs {
+  margin-top: 20px;
+}
+
+.cart .metode {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin-left: 20px;
+}
+
+.cart .metode .p {
+  color: #929292;
+  margin-top: 10px;
+}
+
 .partner {
   margin: 5rem 0;
   background: white;

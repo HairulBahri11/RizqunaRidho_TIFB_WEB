@@ -1,6 +1,6 @@
 <?php
-// require 'config.php';
-// session_start();
+require 'config.php';
+session_start();
 // if(isset($_SESSION['isLogin'])){
 //     echo "halo lagi, ".$_SESSION['user']['nama'];
 // }else {
@@ -9,9 +9,9 @@
 
 
 
-// if (!isset($_SESSION['isLogin'])) {
-//     header("location: login.php");
-// } else {
+if (!isset($_SESSION['isLogin'])) {
+    header("location: login.php");
+} else {
 
 ?>
     <!doctype html>
@@ -215,5 +215,5 @@
 
     </html>
 <?php 
-// }
+}
  ?>

@@ -14,9 +14,7 @@
 
     <style>
        body {
-            background-color: #F5F6F8;
-           
-           
+            background-color: #F5F6F8; 
         }
 
         
@@ -32,7 +30,7 @@
             padding-left: 40px;
             height: 51px; 
             width: 414px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             border: 1px solid #DFE0F3;
             border-radius: 5px 5px 5px 5px;
             
@@ -67,7 +65,7 @@
     <div class="row">
         <div class="col">
             <div class="login">
-                <form action="" class="login-form">
+                <form action="proses/loginProses.php" class="login-form" method="POST">
                     <h4 style="color: #4C4DDC; margin-bottom: 50px; margin-top: 30px;">RR Store</h2>
                     <h2 class="title" style="width: 500px; font-weight: bold;">Login</h2>
                     <p style="margin-bottom: 90px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -75,19 +73,21 @@
                     <div class="input-field">
                     <i class="far fa-envelope"></i>
                         <div class="inputWithIcon">
-                        <input type="text" class = "form-control"placeholder="Enter your email">
+                        <input type="text" class = "form-control" name="email" id="email"placeholder="Enter your email" required>
                         </div>      
                     </div>
                     <label for="password">Password</label>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
                         <div class="inputWithIcon">
-                        <input type="password" placeholder="Enter your password" style="size: 10px;">
+                        <input type="password" class = "form-control" name="password" id="password" placeholder="Enter your password">
                         </div>
                     </div>
+                    <div class="link forget-pass text-left"><a href="forgot-password.php">Forgot password?</a></div>
                     <div class="btn-login">
                         <button type="submit" class="btn btn mt-2 text-white" style="background-color: #4C4DDC; height: 51px;  width: 414px; ">Login</button>
                     </div>
+                    
                     <div class="signUp">
                    <p>Don’t have any account?<a href="register.php">Sign Up</a>  </p> 
                     </div>

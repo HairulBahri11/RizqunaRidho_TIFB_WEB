@@ -66,11 +66,11 @@
         $mail->addAddress($email, $nama);
 
         //Set the subject line
-        $mail->Subject = 'Verification Account - nama website';
+        $mail->Subject = 'Verification Account - Risquna Ridho Store';
 
         //Read an HTML message body from an external file, convert referenced images to embedded,
         //convert HTML into a basic plain-text alternative body
-        $body = "Hi, ".$nama."<br>Plase verif your email before access our website : <br> http://localhost/jualan/proses/confirmEmail.php?code=".$code;
+        $body = "Hi, ".$nama."<br>Plase verif your email before access our website : <br> http://localhost/RizqunaRidho_TIFB_WEB/proses/confirmEmail.php?code=".$code;
         $mail->Body = $body;
         //Replace the plain text body with one created manually
         $mail->AltBody = 'Verification Account';

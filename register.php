@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,7 +34,7 @@
             padding-left: 40px;
             height: 51px; 
             width: 414px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             border: 1px solid #DFE0F3;
             border-radius: 5px 5px 5px 5px;
             
@@ -66,28 +67,32 @@
     
       <div class="row">
         <div class="col">
-            <form action="register.html" class="login-form">
+            <form action="proses/registerProses.php"  method="POST" class="login-form">
                 <h4 style="color: #4C4DDC; margin-bottom: 50px; margin-top: 30px;">RR Store</h2>
                 <h2 class="title" style="width: 500px; font-weight: bold; margin-top: 121px; margin-top: 18px;">Register</h2>
                 <p style="margin-bottom: 70px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                
+                <label for="email">Nama</label>
+                <div class="input-field">
+                <i class="far fa-user"></i>
+                    <div class="inputWithIcon">
+                    <input type="text" class = "form-control"  name="nama" id="nama"placeholder="Enter your name" required >
+                    </div>      
+                </div>
                 <label for="email">Email</label>
                 <div class="input-field">
                 <i class="far fa-envelope"></i>
                     <div class="inputWithIcon">
-                    <input type="text" class = "form-control"placeholder="Enter your email">
+                    <input type="text" class = "form-control"  name="email" id="email" placeholder="Enter your email" required >
                     </div>      
                 </div>
-                <label for="password">Password</label>
+                <label for="password" >Password</label>
                 <div class="input-field">
                     <i class="fas fa-lock"></i>
                     <div class="inputWithIcon">
-                    <input type="password" placeholder="Enter your password" style="size: 10px;">
+                    <input type="password" placeholder="Enter your password"  name="password" id="password" class = "form-control" required>
                     </div>
                 </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">I agree to term  of service and privacy police </label>
-                  </div>
                 <div class="btn-login">
                     <button type="submit" class="btn btn mt-2 text-white" style="background-color: #4C4DDC; height: 51px;  width: 414px; ">Register</button>
                 </div>

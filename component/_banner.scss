@@ -1,0 +1,13 @@
+.banner {
+    background: url('Img/Banner.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+
+    .title {
+        color: #FFFFFF;
+        font-size: 54px;
+        font-weight: 600;
+        margin-top: 9rem;
+    }
+}

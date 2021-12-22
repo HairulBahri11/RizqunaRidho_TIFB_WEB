@@ -1,0 +1,51 @@
+.product {
+    margin-top: 100px;
+
+    .title {}
+
+    .product-item {
+        margin-top: 50px;
+
+        .card {
+            border: none;
+            margin-bottom: 20px;
+            background: none;
+
+            .card-body{
+                padding: 15px 0px 0px 0px;
+
+                .star{
+                    color: #DECD30;
+                }
+                }
+            }
+
+            .btn {
+                width: 100%;
+                background: none;
+                color: $primary-color;
+                border-color: #DFE0F3;
+                transition: .3s;
+
+                &:hover {
+                    background: $primary-color;
+                    color: #FFFFFF;
+                }
+            }
+
+
+            .card-title {
+                font-size: 20px;
+                font-weight: bold;
+            }
+
+            .card-text {
+
+                &:last-child {
+                    text-decoration: line-through;
+                    color: #b3b3b3;
+
+                }
+            }
+        }
+    }

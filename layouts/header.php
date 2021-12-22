@@ -12,6 +12,9 @@
     }
     $sesID = $_SESSION['userid'];
     $sesName = $_SESSION['nama'];
+    $sesAlamat = $_SESSION['alamat'];
+    $sesNotelp = $_SESSION['notelp'];
+    $sesEmail = $_SESSION['email'];
 
 ?>
 

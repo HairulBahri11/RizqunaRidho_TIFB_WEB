@@ -6,37 +6,23 @@ $validate = '';
 //mengecek apakah form registrasi di submit atau tidak
 if( isset($_POST['submit']) ){
         // menghilangkan backshlases
-        $username = stripslashes($_POST['nama']);
-        //cara sederhana mengamankan dari sql injection
-        $username = mysqli_real_escape_string($con, $username);
-        $telp    = stripslashes($_POST['notelp']);
-        $telp    = mysqli_real_escape_string($con, $telp);
-        $alamat    = stripslashes($_POST['alamat']);
-        $alamat    = mysqli_real_escape_string($con, $alamat);
-        $email    = stripslashes($_POST['email']);
-        $email    = mysqli_real_escape_string($con, $email);
-        $password = stripslashes($_POST['password']);
-        $password = mysqli_real_escape_string($con, $password);
-        //cek apakah nilai yang diinputkan pada form ada yang kosong atau tidak
-        if(!empty(trim($username)) && !empty(trim($telp)) && !empty(trim($alamat)) && !empty(trim($email)) && !empty(trim($password))){
-                //memanggil method cek_nama untuk mengecek apakah user sudah terdaftar atau belum
-                    //hashing password sebelum disimpan didatabase
-                    $pass  = password_hash($password, PASSWORD_DEFAULT);
-                    //insert data ke database
-                    $query = "INSERT INTO users (nama, notelp, alamat, email, password ) VALUES ('$username','$telp','$alamat','$email','$pass')";
-                    $result   = mysqli_query($con, $query);
+        $nama = $_POST['nama'];
+		$telp = $_POST['notelp'];
+		$alamat = $_POST['alamat'];
+		$email = $_POST['email'];
+		// $pass = password_hash($_POST['password'], PASSWORD_DEFAULT); 
+        $pass = $_POST['password'];
+			  
+		$tambahuser = mysqli_query($con,"insert into users (nama, notelp, alamat, email, password) 
+		values('$nama','$telp','$alamat','$email','$pass')");
                     //jika insert data berhasil maka akan diredirect ke halaman index.php serta menyimpan data username ke session
-                    if ($result) {
-                        $_SESSION['username'] = $username;
-                        
+                    if ($tambahuser) {
                         header('Location: home.php');
-                     
                     //jika gagal maka akan menampilkan pesan error
                     } else {
                         $error =  'Register User Gagal !!';
                     }
-                } 
-            }
+                }
 ?>
 <!DOCTYPE html>
 <html lang="en">

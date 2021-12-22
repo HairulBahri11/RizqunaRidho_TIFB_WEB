@@ -201,7 +201,7 @@ include ('layouts/session.php');
                                         <tbody>
                                             <?php
                                             
-                                            $tampil = mysqli_query($con, "SELECT * from cart WHERE status = 'COMPLETED' ");
+                                            $tampil = mysqli_query($con, "SELECT * from cart WHERE status = 'COMPLATE' ");
                                             
                                             $no = 1;
                                             while($row  = mysqli_fetch_array($tampil)) {

@@ -198,7 +198,7 @@ if ($sesLvl == 1) {
                     <div class="container mb-8">
                         <div class="row">
                             <div class="col-11">
-                            <button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-sm col-md-2 mt-5" name="tambah"  <?php echo $dis; ?>>Tambah kategori</button>
+                            <button style="margin-bottom:20px" data-toggle="modal" data-target="#myModal" class="btn btn-primary btn-sm col-md-2 mt-5" name="tambah"  <?php echo $dis; ?>>Tambah Petugas</button>
                                 <table class="table mb-5">
                                     <thead>
                                         <tr class="mb-2">

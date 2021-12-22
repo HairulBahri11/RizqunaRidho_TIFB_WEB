@@ -19,7 +19,7 @@ include('layouts/header.php')
                         <a class="nav-link" href="pesanandiproses.php">Menunggu konfirmasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dikirim.php">Dikikrim</a>
+                        <a class="nav-link" href="dikirim.php">Dikirim</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pesananselesai.php">Selesai</a>

@@ -1,16 +1,13 @@
 <?php
- require ("config.php");
+require ("config.php");
   // inisialisasi session
     session_start();
 
     if(isset($_POST['submit'])) {
 
-        $email = mysqli_real_escape_string($con,$_POST['txt_email']);
-       $pass = mysqli_real_escape_string($con,$_POST['txt_pass']);
-    // $email = $_POST['txt_email'];
-
-    // $pass = password_hash($_POST['txt_pass'], PASSWORD_DEFAULT);
-    // $pass = $_POST['txt_pass'];
+    $email = mysqli_real_escape_string($con,$_POST['txt_email']);
+    $pass = mysqli_real_escape_string($con,$_POST['txt_pass']);
+    
 
     if(!empty(trim($email)) && !empty(trim($pass))) {
         $query = "SELECT * FROM users where email = '$email'";
@@ -22,6 +19,8 @@
             $userVal = $row['email'];
             $passVal = $row['password'];
             $userName = $row['nama'];
+            $alamat = $row['alamat'];
+            $noTelp = $row['notelp'];
 
         }
         if($num != 0) {
@@ -29,12 +28,15 @@
                 // header('Location: home.php?user_fullname='. urlencode($userName));
                 $_SESSION['userid'] = $id;
                 $_SESSION['nama'] = $userName;
+                $_SESSION['email'] = $userVal;
+                $_SESSION['alamat'] = $alamat;
+                $_SESSION['notelp'] = $noTelp;
                 header('Location: home.php');
 
             }else{
                 ?>
                 <script>
-                  alert('Password e salah cuyy!!!');
+                  alert('Password salah');
                   location = 'login.php';
                 </script>
                 <?php
@@ -42,7 +44,7 @@
           }else{
               ?>
               <script>
-                alert('Usere ndak onok!!!');
+                alert('User tidak ditemukan');
                 location = 'login.php';
               </script>
               <?php
@@ -52,7 +54,7 @@
           echo $error;
       }
 }
-
+     
     ?>
 
 <!doctype html>
@@ -133,7 +135,7 @@
                             </div>
                             <label for="password">Password</label>
                             <div class="input-field">
-                                <i class='bx bx-lock-alt' ></i>
+                                <i class='bx bx-lock-alt'></i>
                                 <div class="inputWithIcon">
                                     <input type="password" class="form-control" name="txt_pass" id="password"
                                         placeholder="Enter your password">

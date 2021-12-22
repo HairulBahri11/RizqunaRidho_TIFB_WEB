@@ -21,11 +21,11 @@ $itungcust = mysqli_query($con,"select count(userid) as jumlahcust from users");
 	$itungorder_kirim2 = mysqli_fetch_assoc($itungorder_kirim);
 	$itungorder_kirim3 = $itungorder_kirim2['jumlahorder'];
 
-    $itungorder_selesai = mysqli_query($con,"select count(idcart) as jumlahorder from cart where status = 'COMPLETED'");
+    $itungorder_selesai = mysqli_query($con,"select count(idcart) as jumlahorder from cart where status = 'COMPLATE'");
 	$itungorder_selesai2 = mysqli_fetch_assoc($itungorder_selesai);
 	$itungorder_selesai3 = $itungorder_selesai2['jumlahorder'];
 	
-	$itungtrans = mysqli_query($con,"select SUM(totalbelanja) as pendapatan from cart where status ='COMPLETED'");
+	$itungtrans = mysqli_query($con,"select SUM(totalbelanja) as pendapatan from cart where status ='COMPLATE'");
 	$itungtrans2 = mysqli_fetch_assoc($itungtrans);
 	$itungtrans3 = $itungtrans2['pendapatan'];
 
@@ -236,7 +236,7 @@ $itungcust = mysqli_query($con,"select count(userid) as jumlahcust from users");
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $itungcust3; ?></div>
                                         </div>
                                         <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                            <i class="fas fa-user fa-2x text-gray-300"></i>
                                         </div>
                                     </div>
                                 </div>

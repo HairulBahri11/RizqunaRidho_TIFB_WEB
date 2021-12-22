@@ -19,7 +19,7 @@ include('layouts/header.php')
                         <a class="nav-link active" href="pesanandiproses.php">Menunggu konfirmasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dikirim.php">Dikikrim</a>
+                        <a class="nav-link" href="dikirim.php">Dikirim</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="pesananselesai.php">Selesai</a>
@@ -43,6 +43,7 @@ include('layouts/header.php')
                         
                         $no = 1;
                         while($row  = mysqli_fetch_array($tampil)) {
+                        $idcart       = $row['idcart'];
                         $kode       = $row['kodeorder'];
                         $tglbelanja = $row['tglbelanja'];
                         $total      = $row['totalbelanja'];
@@ -50,7 +51,7 @@ include('layouts/header.php')
                         ?>
                         <tr>
                             <td scope="col"><?php echo $no; ?></td>
-                            <td scope="col"><?php echo $kode; ?></td>
+                            <td scope="col"><a href="detailpesanan.php?idcart=<?php echo $idcart ?>"><?php echo $kode; ?></td>
                             <td scope="col"><?php echo $tglbelanja; ?></td>
                             <td scope="col">Rp <?php echo $total; ?>,-</td>
                             <td scope="col" class="status"><?php echo $status; ?></td>

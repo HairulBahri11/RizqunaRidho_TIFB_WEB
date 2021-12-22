@@ -40,6 +40,7 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                               <a class="dropdown-item" href="pesanansaya.php">Pesanan Saya</a>
+                              <a class="dropdown-item" href="profile.php">Profile</a>
                               <a class="dropdown-item" href="logout.php">Logout</a>
                           </div>
                       </div>

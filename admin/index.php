@@ -77,8 +77,7 @@ $itungcust = mysqli_query($con,"select count(userid) as jumlahcust from users");
 
             <!-- Divider -->
             <hr class="sidebar-divider">
-
-            <!-- Heading -->
+            
             <div class="sidebar-heading">
                 Kelola Toko
             </div>
@@ -155,7 +154,7 @@ $itungcust = mysqli_query($con,"select count(userid) as jumlahcust from users");
 
             <!-- Main Content -->
             <div id="content">
-
+            
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
@@ -164,7 +163,19 @@ $itungcust = mysqli_query($con,"select count(userid) as jumlahcust from users");
                         <i class="fa fa-bars"></i>
                     </button>
             
-
+                    <script type='text/javascript'>
+					
+                    var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+                    var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+                    var date = new Date();
+                    var day = date.getDate();
+                    var month = date.getMonth();
+                    var thisDay = date.getDay(),
+                        thisDay = myDays[thisDay];
+                    var yy = date.getYear();
+                    var year = (yy < 1000) ? yy + 1900 : yy;
+                    document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
+           </script>
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         </li>
@@ -196,7 +207,7 @@ $itungcust = mysqli_query($con,"select count(userid) as jumlahcust from users");
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
+              
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>

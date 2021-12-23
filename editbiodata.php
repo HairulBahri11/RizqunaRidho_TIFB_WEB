@@ -35,6 +35,7 @@ include('layouts/header.php')
                         }
                     }
                     //jika tombol simpan di tekan/klik
+                    //mengisi sesuai data dan menyesuaikan di database
                     if (isset($_POST['insert'])) {
                         
                         $userid = $_GET['userid'];

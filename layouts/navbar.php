@@ -1,4 +1,4 @@
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
           <a class="navbar-brand" href="home.php">RR Store</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -40,7 +40,7 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                               <a class="dropdown-item" href="pesanansaya.php">Pesanan Saya</a>
-                              <a class="dropdown-item" href="profile.php">Profile</a>
+                              <a class="dropdown-item" href="profile.php?userid=<?php echo $_SESSION['userid'] ?>">Profile</a>
                               <a class="dropdown-item" href="logout.php">Logout</a>
                           </div>
                       </div>

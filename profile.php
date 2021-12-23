@@ -3,7 +3,11 @@ $title = "Profile";
 include('layouts/header.php');
 ?>
 
-
+<?php
+                    $userid = $_GET['userid'];
+                   
+                    $result   = mysqli_fetch_array(mysqli_query($con, "SELECT * FROM users WHERE userid = '$sesID'"));
+      ?>
 
 <div class="profile">
     <div class="container">
@@ -14,7 +18,7 @@ include('layouts/header.php');
                         <div class="d-flex m-auto">
                             <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=580&q=80"
                                 alt="">
-                            <p><?php echo $sesName ?></p>
+                            <p><?php echo $result['nama']; ?></p>
                         </div>
                         <hr class="hr-profile">
                     </div>
@@ -43,29 +47,29 @@ include('layouts/header.php');
                         <div class="col-3">
                             <div class="nama mt-5">
                                 <h5>Nama :</h5>
-                                <p><?= $sesName ?></p>
+                                <p><?php echo $result['nama']; ?></p>
                             </div>
                             <div class="notelp mt-5">
                                 <h5>No Telepon :</h5>
-                                <p><?= $sesNotelp ?></p>
+                                <p><?php echo $result['notelp']; ?></p>
                             </div>
                             <div class="email mt-5">
                                 <h5>Email :</h5>
-                                <p><?= $sesEmail ?></p>
+                                <p><?php echo $result['email'] ?></p>
                             </div>
                         </div>
                         <div class="col-5">
                             <div class="alamat mt-5">
                                 <h5>Alamat Anda:</h5>
-                                <p><?= $sesAlamat ?></p>
+                                <p><?php echo $result['alamat'] ?></p>
                             </div>
                             <div class="aksi mt-5">
                                 <div class="row">
                                     <div class="col-4">
-                                        <a href="editbiodata.php?userid=<?php echo $sesID ?>" class="btn-sm btn-warning">Edit Profile</a>
+                                        <a href="editbiodata.php?userid=<?php echo $result['userid'] ?>" class="btn-sm btn-warning">Edit Profile</a>
                                     </div>
                                     <div class="col">
-                                        <a href="editalamat.php" class="btn-sm btn-primary">Edit Alamat</a>
+                                        <a href="editalamat.php?userid=<?php echo$result['userid'] ?>" class="btn-sm btn-primary">Edit Alamat</a>
                                     </div>
                                 </div>
                             </div>
